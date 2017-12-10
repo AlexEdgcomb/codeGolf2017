@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ruby boxes.rb <<< '4,1,2;8,1,3;1,1,1'
-ruby boxes.rb <<< '5,3,4;8,3,1;1,3,7'
-ruby boxes.rb <<< '0,0,0'
-ruby boxes.rb <<< '8,3,0;0,3,8'
+ruby boxes.rb <<< '412 813 111'
+ruby boxes.rb <<< '534 831 137'
+ruby boxes.rb <<< '000'
+ruby boxes.rb <<< '830 038'
