@@ -8,17 +8,8 @@ e.map{|r|i=e.index r
 o=i-k
 o>=0?r<<d[o]:r<<$z*h}
 e}
-q=->r,w{s=r.max_by(&:size).size
-e,t=[Array.new(s){''},r.pop]
-r.map{|d|i=r.index d
-e=f[e,d,w,i>0]
-y=e.reverse
-y.map{|r|i=y.index r
-u=w+2-i
-u>0?r<<?_*u:r<<$z}}
-f[e,t,w,0]}
 y=gets.split.map{|n|n.chars.map(&:to_i)}
-c=y.map{|a|l,w,h=a[0],a[1],a[2]
+r=y.map{|a|l,w,h=a[0],a[1],a[2]
 c=3+w+h
 d=Array.new(c){''}
 d.map{|r|i=d.index r
@@ -39,4 +30,11 @@ i>h+1&&i<2+w+h ?(s=l+c-i-r.size
 s>0?r<<$z*s:p
 r<<?/):p}
 d}
-puts q[c,y[0][1]]
+w,e,t=y[0][1],Array.new(r.max_by(&:size).size){''},r.pop
+r.map{|d|i=r.index d
+e=f[e,d,w,i>0]
+y=e.reverse
+y.map{|r|i=y.index r
+u=w+2-i
+u>0?r<<?_*u:r<<$z}}
+puts f[e,t,w,0]
