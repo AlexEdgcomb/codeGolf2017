@@ -1,5 +1,5 @@
 $z=' '
-f=->e,d,w,g{!g ?(d.map{|r|i=d.index r
+f=->e,d,w,g{g ?(d.map{|r|i=d.index r
 d.size-i<=w+2?(t=0
 (r[t]=?_
 t=t+1)while r[t]==$z):p}):p
@@ -11,13 +11,13 @@ e}
 q=->r,w{s=r.max_by(&:size).size
 e,t=[Array.new(s){''},r.pop]
 r.map{|d|i=r.index d
-e=f[e,d,w,i==0]
+e=f[e,d,w,i>0]
 y=e.reverse
 y.map{|r|i=y.index r
 u=w+2-i
 u>0?r<<?_*u:r<<$z}}
 f[e,t,w,0]}
-y=gets.split.map{|n|n.chars.map{|j|j.to_i}}
+y=gets.split.map{|n|n.chars.map(&:to_i)}
 c=y.map{|a|l,w,h=a[0],a[1],a[2]
 c=3+w+h
 d=Array.new(c){''}
