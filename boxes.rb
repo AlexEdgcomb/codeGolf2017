@@ -29,7 +29,7 @@ s>0?r<<$z*s:p
 r<<?/):p}
 d}
 w,e,t=y[0][1],Array.new(r.max_by(&:size).size){''},r.pop
-r.map{|d|e=f[e,d,w,r.index(d)>0]
+r.map{|d|e=f[e,d,w,r[0]!=d]
 y=e.reverse
 y.map{|r|u=w+2-y.index(r)
 u>0?r<<?_*u:r<<$z}}
