@@ -1,7 +1,7 @@
 $z=' '
-def b(l,w,h)a=3+w+h
+b=->l,w,h{a=3+w+h
 d=Array.new(a){''}
-d.each_with_index{|r,i|
+d.map{|r|i=d.index r
 s=w+1-i
 s>0?r<<$z*s:p
 if [0,w+1,2+w+h].include?i
@@ -18,28 +18,25 @@ r<<?+):p
 i>h+1&&i<2+w+h ?(s=l+a-i-r.size
 s>0?r<<$z*s:p
 r<<?/):p}
-d
-end
-def f(e,d,w,g)!g ?(d.each_with_index{|r,i|
+d}
+f=->e,d,w,g{!g ?(d.map{|r|i=d.index r
 d.size-i<=w+2?(t=0
 (r[t]=?_
 t=t+1)while r[t]==$z):p}):p
 h,k=[d.max_by(&:size).size,e.size-d.size]
-e.each_with_index{|r,i|
+e.map{|r|i=e.index r
 o=i-k
 o>=0?r<<d[o]:r<<$z*h}
-e
-end
-def q(r,w)s=r.max_by(&:size).size
+e}
+q=->r,w{s=r.max_by(&:size).size
 e,t=[Array.new(s){''},r.pop]
-r.each_with_index{|d,i|
-e=f e,d,w,i==0
-e.reverse.each_with_index{|r,i|
+r.map{|d|i=r.index d
+e=f[e,d,w,i==0]
+y=e.reverse
+y.map{|r|i=y.index r
 u=w+2-i
 u>0?r<<?_*u:r<<$z}}
-e=f e,t,w,0
-e
-end
-b=gets.split(?;).map{|n|n.split(?,).map{|j|j.to_i}}
-c=b.map{|a|b(a[0],a[1],a[2])}
-puts q c,b[0][1]
+f[e,t,w,0]}
+y=gets.split(?;).map{|n|n.split(?,).map{|j|j.to_i}}
+c=y.map{|a|b[a[0],a[1],a[2]]}
+puts q[c,y[0][1]]
