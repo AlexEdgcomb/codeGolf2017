@@ -1,11 +1,9 @@
 $z=' '
-f=->e,d,w,g{g ?(d.map{|r|i=d.index r
-d.size-i<=w+2?(t=0
+f=->e,d,w,g{g ?(d.map{|r|d.size-d.index(r)<=w+2?(t=0
 (r[t]=?_
 t=t+1)while r[t]==$z):p}):p
 h,k=[d.max_by(&:size).size,e.size-d.size]
-e.map{|r|i=e.index r
-o=i-k
+e.map{|r|o=e.index(r)-k
 o>=0?r<<d[o]:r<<$z*h}
 e}
 y=gets.split.map{|n|n.chars.map(&:to_i)}
@@ -31,10 +29,8 @@ s>0?r<<$z*s:p
 r<<?/):p}
 d}
 w,e,t=y[0][1],Array.new(r.max_by(&:size).size){''},r.pop
-r.map{|d|i=r.index d
-e=f[e,d,w,i>0]
+r.map{|d|e=f[e,d,w,r.index(d)>0]
 y=e.reverse
-y.map{|r|i=y.index r
-u=w+2-i
+y.map{|r|u=w+2-y.index(r)
 u>0?r<<?_*u:r<<$z}}
 puts f[e,t,w,0]
