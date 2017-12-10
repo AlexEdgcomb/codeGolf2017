@@ -1,16 +1,16 @@
 #!/bin/bash
 
-echo "1 2 3 4 5 6 7
-1 3;4 7" | ruby transport.rb
+echo "13 47
+1234567" | ruby transport.rb
 echo "----"
-echo "1  2  3  4  5  6  7
-4 7;1 3" | ruby transport.rb
+echo "47 13
+1234567" | ruby transport.rb
 echo "----"
-echo "7  3  5  4  6  1  2
-1 3;4 5;6 7" | ruby transport.rb
+echo "13 45 67
+7354612" | ruby transport.rb
 echo "----"
-echo "4  7  6  3  5  2  1
-1 4;5 7" | ruby transport.rb
+echo "14 57
+4763521" | ruby transport.rb
 echo "----"
-echo "1  1  3  3  6  4  7
-1 4;6 7" | ruby transport.rb
+echo "14 67
+1133647" | ruby transport.rb
